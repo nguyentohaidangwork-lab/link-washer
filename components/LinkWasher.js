@@ -258,7 +258,7 @@ export default function LinkWasher() {
 
     pendingSnowballRef.current = snowballRef;
     pendingBase.current = urlObj.origin + urlObj.pathname;
-    pendingProjectOrigin.current = urlObj.origin;
+    pendingProjectOrigin.current = urlObj.origin.replace(/^(https?:\/\/)www\./, "$1");
     setActivePlatform(null);
     setShowCustomPlatform(false);
     setCustomPlatformUrl("");
